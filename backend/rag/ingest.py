@@ -1,3 +1,5 @@
+import os
+
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
@@ -5,6 +7,9 @@ from langchain_community.embeddings import FakeEmbeddings
 from langchain_community.vectorstores import Chroma
 
 CHROMA_PATH = "vectorstore"
+
+# Create vectorstore folder automatically
+os.makedirs(CHROMA_PATH, exist_ok=True)
 
 
 def ingest_document(file_path):
