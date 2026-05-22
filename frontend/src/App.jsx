@@ -22,7 +22,7 @@ function App() {
       setLoading(true);
 
       const response = await axios.post(
-        "https://banking-rag-chatbot-0ki1.onrender.com",
+        "https://banking-rag-chatbot-0ki1.onrender.com/upload",
         formData,
         {
           headers: {
@@ -51,7 +51,7 @@ function App() {
       setLoading(true);
 
       const response = await axios.post(
-        "https://banking-rag-chatbot-0ki1.onrender.com",
+        "https://banking-rag-chatbot-0ki1.onrender.com/chat",
         {
           session_id: "user1",
           question: question,
