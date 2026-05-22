@@ -3,6 +3,5 @@ uvicorn
 python-multipart
 langchain
 langchain-community
-chromadb
-sentence-transformers
+chromadb==0.4.24
 pypdf
