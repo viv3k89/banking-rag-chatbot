@@ -5,7 +5,7 @@ def generate_response(question, docs):
     responses = f"""
 Based on the banking knowledge base:
 
-{context[:700]}
+{context[:350]}
 """
 
     return responses
