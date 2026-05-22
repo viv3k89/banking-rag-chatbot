@@ -107,6 +107,11 @@ B --> A
 
 ```
 
+---
+
+# 📁 Folder Structure
+
+```bash
 banking-rag-chatbot/
 │
 ├── backend/
