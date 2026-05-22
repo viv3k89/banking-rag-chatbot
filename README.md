@@ -21,7 +21,6 @@ The system uses:
 - LangChain-based RAG pipeline
 
 ---
-
 # 🚀 Features
 
 ## Implemented Features
