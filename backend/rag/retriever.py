@@ -1,4 +1,4 @@
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.embeddings import FakeEmbeddings
 from langchain_community.vectorstores import Chroma
 
 CHROMA_PATH = "vectorstore"
@@ -6,9 +6,7 @@ CHROMA_PATH = "vectorstore"
 
 def get_retriever():
 
-    embeddings = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
-    )
+    embeddings = FakeEmbeddings(size=384)
 
     vectordb = Chroma(
         persist_directory=CHROMA_PATH,
