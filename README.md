@@ -105,7 +105,7 @@ I --> C
 C --> B
 B --> A
 
-```mermaid
+```
 
 banking-rag-chatbot/
 │
