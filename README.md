@@ -1,67 +1,112 @@
-Banking RAG Chatbot
+# 🏦 Banking RAG Chatbot
 
 A full-stack Generative AI application that allows users to upload banking-related PDF documents and ask contextual questions using Retrieval-Augmented Generation (RAG).
 
-Project Overview
+---
+
+# 📌 Project Overview
 
 The Banking RAG Chatbot enables users to:
 
-Upload banking PDF documents
-Process and store document content
-Ask natural language questions
-Retrieve contextual answers from uploaded documents
+- Upload banking PDF documents
+- Process and store document content
+- Ask natural language questions
+- Retrieve contextual answers from uploaded documents
 
 The system uses:
 
-FastAPI backend
-React frontend
-ChromaDB vector database
-LangChain-based RAG pipeline
-Features
-Implemented Features
-PDF Upload Support
-Banking Knowledge Extraction
-Text Chunking
-Vector Database Storage
-Retrieval-Augmented Generation (RAG)
-Question Answering System
-FastAPI REST APIs
-React Frontend
-Cloud Deployment using Render
-GitHub Integration
-Tech Stack
-Frontend
-React.js
-Vite
-Axios
-CSS
-Backend
-FastAPI
-Python
-LangChain
-Vector Database
-ChromaDB
-Document Processing
-PyPDFLoader
-RecursiveCharacterTextSplitter
-Deployment
-GitHub
-Render
-Project Architecture
+- FastAPI backend
+- React frontend
+- ChromaDB vector database
+- LangChain-based RAG pipeline
+
+---
+
+# 🚀 Features
+
+## Implemented Features
+
+- PDF Upload Support
+- Banking Knowledge Extraction
+- Text Chunking
+- Vector Database Storage
+- Retrieval-Augmented Generation (RAG)
+- Question Answering System
+- FastAPI REST APIs
+- React Frontend
+- Cloud Deployment using Render
+- GitHub Integration
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+- React.js
+- Vite
+- Axios
+- CSS
+
+## Backend
+- FastAPI
+- Python
+- LangChain
+
+## Vector Database
+- ChromaDB
+
+## Document Processing
+- PyPDFLoader
+- RecursiveCharacterTextSplitter
+
+## Deployment
+- GitHub
+- Render
+
+---
+
+# 🏗️ Project Architecture
 
 The project follows a Retrieval-Augmented Generation workflow.
 
-Architecture Flow
-User uploads a banking PDF
-Backend extracts text from PDF
-Text is split into chunks
-Chunks are stored in ChromaDB
-User asks a question
-Relevant chunks are retrieved
-Response is generated from retrieved context
-Answer is returned to frontend
-Architecture Diagram
-Folder Structure
+## Architecture Flow
+
+1. User uploads a banking PDF
+2. Backend extracts text from PDF
+3. Text is split into chunks
+4. Chunks are stored in ChromaDB
+5. User asks a question
+6. Relevant chunks are retrieved
+7. Response is generated from retrieved context
+8. Answer is returned to frontend
+
+---
+
+# 📊 Architecture Diagram
+
+```mermaid
+flowchart TD
+
+A[User] --> B[React Frontend]
+
+B -->|Upload PDF| C[FastAPI Backend]
+B -->|Ask Question| C
+
+C --> D[PyPDFLoader]
+D --> E[Text Chunking]
+E --> F[Chroma Vector Database]
+
+C --> G[Retriever]
+G --> F
+
+F --> H[Relevant Chunks Retrieved]
+H --> I[Response Generator]
+
+I --> C
+C --> B
+B --> A
+
+**#📁 Folder Structure**
 banking-rag-chatbot/
 │
 ├── backend/
@@ -77,7 +122,9 @@ banking-rag-chatbot/
 │   └── package.json
 │
 └── README.md
-API Endpoints
+
+
+🔌 API Endpoints
 Upload PDF
 POST /upload
 
@@ -97,7 +144,7 @@ GET /health
 
 Checks backend server status.
 
-Installation & Setup
+⚙️ Installation & Setup
 1. Clone Repository
 git clone https://github.com/viv3k89/banking-rag-chatbot.git
 Backend Setup
@@ -130,19 +177,23 @@ npm run dev
 Frontend runs on:
 
 http://localhost:5173
-Deployment Links
+🌐 Deployment Links
 Frontend
+
 https://banking-rag-frontend.onrender.com
+
 Backend
+
 https://banking-rag-chatbot-0ki1.onrender.com
-Example Workflow
+
+🧠 Example Workflow
 Upload Banking PDF
 Ask Question:
 “What is a personal loan?”
 “What is a home loan?”
 Chatbot retrieves relevant banking information
 Response displayed on frontend
-Challenges Faced
+⚠️ Challenges Faced
 
 During development, several technical challenges were encountered:
 
@@ -152,7 +203,7 @@ CORS configuration
 Backend deployment issues
 Vector database persistence
 Frontend-backend integration
-Future Improvements
+🔮 Future Improvements
 Integrate Gemini/OpenAI embeddings
 Improve semantic retrieval accuracy
 Add authentication system
@@ -160,13 +211,7 @@ Add persistent memory
 Use cloud vector databases like Pinecone
 Multi-document support
 Better AI-generated summarized responses
-Current Limitations
-
-To optimize deployment for Render free-tier hosting, lightweight placeholder embeddings are currently used instead of production-grade semantic embeddings.
-
-This allows successful deployment while maintaining the complete RAG architecture.
-
-Learning Outcomes
+📚 Learning Outcomes
 
 This project provided practical experience in:
 
@@ -178,13 +223,13 @@ Vector databases
 Cloud deployment
 API integration
 LangChain workflows
-Author
+👨‍💻 Author
 Vivek
 
 GitHub:
-
 https://github.com/viv3k89
-Conclusion
+
+✅ Conclusion
 
 The Banking RAG Chatbot successfully demonstrates a complete Retrieval-Augmented Generation pipeline using modern AI engineering tools.
 
@@ -198,3 +243,11 @@ cloud deployment
 Generative AI architecture
 
 making it a strong portfolio and internship-level GenAI project.
+
+
+After replacing:
+
+```bash
+git add .
+git commit -m "Updated professional README"
+git push origin main
