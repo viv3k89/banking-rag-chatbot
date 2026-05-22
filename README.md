@@ -106,7 +106,7 @@ I --> C
 C --> B
 B --> A
 
-**#📁 Folder Structure**
+
 banking-rag-chatbot/
 │
 ├── backend/
