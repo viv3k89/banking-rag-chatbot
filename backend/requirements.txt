@@ -5,3 +5,4 @@ langchain
 langchain-community
 chromadb==0.4.24
 pypdf
+numpy==1.26.4
